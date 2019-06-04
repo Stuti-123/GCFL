@@ -1,0 +1,36 @@
+	import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    int n=sc.nextInt();
+	    int j=0;int count1=0;
+	    int count=0;
+	    for(int i=1;i<=n;i++)
+	    {
+	        for(int k=1;k<=n-i;k++)
+	        {
+	            System.out.print(" ");
+	            count++;
+	        }
+	        while(j!=2*i-1)
+	        { 
+	            if(count<=n-1)
+	            {
+	                System.out.print(i+j);
+	                count++;
+	            }
+	            else{
+	                ++count1;
+	                System.out.print(i+j-(2*count1));
+	            }
+	            j++;
+	        }
+	        count=count1=j=0;
+	        
+	        System.out.println();
+	    }
+		
+	}
+}
