@@ -1,0 +1,40 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    // Complete the beautifulDays function below.
+    
+    
+    public static void main(String[] args) throws IOException {
+       Scanner sc=new Scanner(System.in);
+        int i=sc.nextInt();
+        int j=sc.nextInt();
+        int k=sc.nextInt();
+        int c=0;int t;int r; int d;
+        int diff;
+        for(int x=i;x<=j;x++)
+        {    t=x;
+             r=0;
+          d=0;
+            while(t!=0)
+            {
+                d=t%10;
+                r=r*10+d;
+                t=t/10;
+            }
+         diff=Math.abs(x-r);
+         if(diff%k==0)
+         {
+             c++;
+         }
+         
+        }
+        System.out.println(c);
+    }
+}
