@@ -1,0 +1,21 @@
+public class Main
+{
+	public static void main(String[] args) {
+	String s="ABCDEFGH";
+	int rank=1;
+	for(int x=0;x<=s.length();x++)
+	{
+	    for(int j=x+1;j<=s.length();j++)
+	    {
+	         String k=s.substring(x,j);
+	         System.out.println(k);
+	         if(s.compareTo(k)>0)
+	         {
+	             rank++;
+	         }
+	    }
+	}
+	
+	System.out.println(rank);
+	}
+}
